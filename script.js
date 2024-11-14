@@ -1,5 +1,12 @@
 var activeColor = '';
 
+var numWhites = 0;
+var numReds = 0;
+var numBlues = 0;
+var numGreens = 0;
+var numOranges = 0;
+var numYellows = 0;
+
 function changeActiveColorToRed() {
 	activeColor = 'red';
 }
@@ -81,5 +88,49 @@ const mapping = [
   console.log(mapping[i]);
 }*/
 
-console.log(mapping);
+//console.log(mapping);
 
+
+
+function checkNumbers() {
+    numWhites = 0;
+    numReds = 0;
+    numBlues = 0;
+    numGreens = 0;
+    numOranges = 0;
+    numYellows = 0;
+
+    const cells = document.querySelectorAll('#main td');
+
+    cells.forEach(cell => {
+        const color = window.getComputedStyle(cell).backgroundColor;
+        
+        switch(color) {
+            case 'rgb(255, 0, 0)':
+                numReds++;
+                break;
+            case 'rgb(0, 0, 255)':
+                numBlues++;
+                break;
+            case 'rgb(0, 128, 0)':
+                numGreens++;
+                break;
+            case 'rgb(255, 165, 0)':
+                numOranges++;
+                break;
+            case 'rgb(255, 255, 0)':
+                numYellows++;
+                break;
+            case 'rgb(255, 255, 255)':
+                numWhites++;
+                break;
+        }
+    });
+
+    console.log("White faces:", numWhites);
+    console.log("Red faces:", numReds);
+    console.log("Blue faces:", numBlues);
+    console.log("Green faces:", numGreens);
+    console.log("Orange faces:", numOranges);
+    console.log("Yellow faces :", numYellows);
+}
