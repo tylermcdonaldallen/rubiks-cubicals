@@ -133,4 +133,47 @@ function checkNumbers() {
     console.log("Green faces:", numGreens);
     console.log("Orange faces:", numOranges);
     console.log("Yellow faces :", numYellows);
+	
+	console.log("");
+	if(numWhites == 9 && numReds == 9 && numBlues == 9 && numGreens == 9 && numOranges == 9 && numYellows == 9){
+		console.log("Number of each color is correct!");
+	} else {
+		if (numWhites != 9){
+			if (numWhites > 9) {
+				console.log("You have too many white faces!")
+			} else {
+				console.log("You don't have enough white faces!")
+			}
+		} if (numReds != 9){
+			if (numReds > 9) {
+				console.log("You have too many red faces!")
+			} else {
+				console.log("You don't have enough red faces!")
+			}
+		} if (numBlues != 9){
+			if (numBlues > 9) {
+				console.log("You have too many blue faces!")
+			} else {
+				console.log("You don't have enough blue faces!")
+			}
+		} if (numGreens != 9){
+			if (numGreens > 9) {
+				console.log("You have too many green faces!")
+			} else {
+				console.log("You don't have enough green faces!")
+			}
+		} if (numOranges != 9){
+			if (numOranges > 9) {
+				console.log("You have too many orange faces!")
+			} else {
+				console.log("You don't have enough orange faces!")
+			}
+		} if (numYellows != 9){
+			if (numYellows > 9) {
+				console.log("You have too many yellow faces!")
+			} else {
+				console.log("You don't have enough yellow faces!")
+			}
+		}
+	}
 }
