@@ -112,7 +112,7 @@ function checkNumbers() {
             case 'rgb(0, 0, 255)':
                 numBlues++;
                 break;
-            case 'rgb(0, 128, 0)':
+            case 'rgb(0, 255, 0)':
                 numGreens++;
                 break;
             case 'rgb(255, 165, 0)':
